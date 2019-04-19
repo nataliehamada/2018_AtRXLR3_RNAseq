@@ -1,0 +1,11 @@
+##Trimmomatic
+for filename in *fastq.gz
+do
+base=$(basename $filename .fastq.gz)
+echo $base
+trimmomatic SE ${base}.fastq.gz \
+ILLUMINACLIP:truseq.fa:2:35:10 \
+LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:101
+done
+
+
