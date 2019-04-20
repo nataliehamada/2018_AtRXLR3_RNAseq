@@ -10,6 +10,11 @@ done
 
 ##STAR
 #Indexing reference genome
-
+STAR --runThreadN 4 \
+--runMode genomeGenerate \
+--genomeDir /share/rwmwork/nhamada/ref \
+--genomeFastaFiles /share/rwmwork/nhamada/ref/TAIR10_chr_all.fas \
+--sjdbGTFfile /share/rwmwork/nhamada/ref/TAIR10_GFF3_genes.gff \
+--sjdbOverhang 99
 
 
