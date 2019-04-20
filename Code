@@ -8,4 +8,8 @@ ILLUMINACLIP:truseq.fa:2:35:10 \
 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:101
 done
 
+##STAR
+#Indexing reference genome
+
+
 
