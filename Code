@@ -10,11 +10,14 @@ done
 
 ##STAR
 #Indexing reference genome
+module load star
 STAR --runThreadN 4 \
 --runMode genomeGenerate \
 --genomeDir /share/rwmwork/nhamada/ref \
---genomeFastaFiles /share/rwmwork/nhamada/ref/TAIR10_chr_all.fas \
---sjdbGTFfile /share/rwmwork/nhamada/ref/TAIR10_GFF3_genes.gff \
+--genomeFastaFiles /share/rwmwork/nhamada/ref/GCF_000001735.4_TAIR10.1_genomic.fna \
+--sjdbGTFfile /share/rwmwork/nhamada/ref/GCF_000001735.4_TAIR10.1_genomic.gff \
+--sjdbGTFtagExonParentTranscript Parent \
 --sjdbOverhang 99
+
 
 
