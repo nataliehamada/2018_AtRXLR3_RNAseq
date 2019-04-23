@@ -19,5 +19,24 @@ STAR --runThreadN 4 \
 --sjdbGTFtagExonParentTranscript Parent \
 --sjdbOverhang 99
 
+#running star aligner
+REFDIR=/share/rwmwork/nhamada/ref/star_ref
+GTF=/share/rwmwork/nhamada/ref/GCF_000001735.4_TAIR10.1_genomic.gff
+module load star
+mkdir col2777_S3_L003_R1_001_star_alignment
+STAR --runThreadN 4 \
+--sjdbOverhang 99 \
+--genomeDir $REFDIR \
+--sjdbGTFtagExonParentGene gene_id \
+--sjdbGTFfile $GTF \
+--outSAMtype BAM Unsorted SortedByCoordinate \
+--outReadsUnmapped Fastx \
+--quantMode GeneCounts \
+--outWigType wiggle \
+--outFileNamePrefix col2777_S3_L003_R1_001_star_alignment/col2777_S3_L003_R1_001_ \
+--readFilesIn /share/rwmwork/nhamada/2018_AtRXLR3_rnaseq/col2777_S3_L003_R1_001.fastq \
+> col2777_S3_L003_R1_001_star_alignment/col2777_S3_L003_R1_001_STAR.stdout 2> col2777_S3_L003_R1_001_star_alignment/col2777_S3_L003_R1_001_STAR.stderr
+
+
 
 
