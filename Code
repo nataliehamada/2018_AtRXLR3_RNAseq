@@ -38,5 +38,6 @@ STAR --runThreadN 4 \
 > col2777_S3_L003_R1_001_star_alignment/col2777_S3_L003_R1_001_STAR.stdout 2> col2777_S3_L003_R1_001_star_alignment/col2777_S3_L003_R1_001_STAR.stderr
 
 
+#Blasting reads unaligned by STAR to database with lettuce genome + arabidopsis genome
 
 
